@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Music saver",
+  "version": "0.1.0",
+  "permissions": ["tabs", "storage"],
+  "action": {
+    "default_popup": "add_url.html",
+    "default_icon": {
+      "16": "./src/icon/icon.png",
+      "48": "./src/icon/icon.png",
+      "128": "./src/icon/icon.png"
+    }
+  },
+  "icons": {
+    "16": "./src/icon/icon.png",
+    "48": "./src/icon/icon.png",
+    "128": "./src/icon/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["add_popup.js", "archive_popup.js"]
+    }
+  ]
+}
